@@ -200,7 +200,7 @@ export function Editor() {
       }}
     >
       <ambientLight intensity={0.1} />
-      <directionalLight position={[5, 10, 5]} intensity={2} castShadow />
+      <directionalLight position={[5, 10, 5]} intensity={2} />
       <directionalLight position={[-5, 5, -5]} intensity={0.5} />
 
       <ConstrainedOrbitControls controlsRef={controlsRef} />
@@ -209,7 +209,7 @@ export function Editor() {
       <GroundPlane onPlaceBox={handlePlaceBox} />
       <PreviewBox pointerPos={pointerPos} />
       {boxes.map((position, i) => (
-        <Box key={i} position={position} castShadow receiveShadow>
+        <Box key={i} position={position}>
           <meshStandardMaterial color="blue" />
         </Box>
       ))}
